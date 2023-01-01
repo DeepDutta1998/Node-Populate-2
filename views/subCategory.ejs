@@ -1,0 +1,27 @@
+<%-include("navbar")%>
+<h1>Add Sub-Category Page</h1>
+<form action="/add-sub-category" method="post">
+    <div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <label>Category :</label>
+          <select name="categoryName" id="categoryName">
+            <option  selected disabled> choose category </option>
+            <% Allcategory.map((val)=>{%>
+              <option value="<%=val._id%>"><%=val.categoryName%></option>
+              <%})%>
+        </select>
+        </div>
+      </div>
+       
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <label>Enter Sub-Category Name</label>
+        <input type="text" name="subCategory" class="form-control" required />
+      </div>
+    </div><br>
+   
+  <button type="submit" class="btn btn-primary btn-lg btn-block">Add</button>
+</form>
+</div>

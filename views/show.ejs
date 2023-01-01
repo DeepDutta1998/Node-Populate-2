@@ -1,0 +1,23 @@
+<%-include('navbar')%>
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Catgory Name</th>
+        <th scope="col">Category type</th>
+        <th scope="col">Sub-Category Name</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%response.map((val)=>{%>
+     <tr>
+        <td><%= val.categoryName.categoryName%></td>
+        <td><%= val.categoryName.categoryType%></td>
+        <td><%= val.subCategory.subCategory%></td>
+        <td><%= val.productName%></td>
+        <td><%= val.productPrice%></td>
+     </tr>
+     <%})%>
+    </tbody>
+  </table>
